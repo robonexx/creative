@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./thnks.jpeg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-family: 'Gayathri';
+    font-weight: 900;
+}
+
+
+.goBack {
+    position: absolute;
+    width: 60vw;
+    top: 65vh;
+    left: 55vw;
+}
+.back {
+    width: 200px;
+    height: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow {
+    border: solid orange;
+    display: inline-block;
+    padding: 10px;
+    border-width: 0px 0px 3px 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+p {
+    font-size: 16px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width:900px) {
+
+    .goBack {
+        position: absolute;
+        width: 60vw;
+        top: 60vh;
+        left: 40vw;
+    }
+}

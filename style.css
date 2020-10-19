@@ -1,0 +1,1005 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    width: 100vw;
+    text-align: center;
+    font-family: 'Gayathri';
+    background-image: url(./color.jpg);
+    background-position: center center;
+    background-size: cover;
+
+}
+
+.wrapper {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+header {
+    height: 10vh;
+    background: rgb(231, 190, 77);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.logo {
+    width: 35%;
+    padding-left: 0;
+}
+
+
+/* ================================================================ SVG LOGO ==========================================================================*/
+
+/* ====================================================== SVG LOGO / PATH for animation ===================================================================*/
+/* =================================================Learned from Dev eEds designer logo tutorial on YT, done in FIGMA =================================================*/
+
+#logo {
+    margin-top: 1vh;
+    animation: logoFill .6s ease forwards 1.2s;
+    width: 20vw;
+}
+
+
+#logo path:nth-child(1){
+    stroke-dasharray: 470px;
+    stroke-dashoffset: 470px;
+    animation: logo-path 2s ease forwards 0.2s;
+}
+
+#logo path:nth-child(2){
+    stroke-dasharray: 246px;
+    stroke-dashoffset: 246px;
+    animation: logo-path 2s ease forwards 0.4s;
+}
+
+#logo path:nth-child(3){
+    stroke-dasharray: 184px;
+    stroke-dashoffset: 184px;
+    animation: logo-path 2s ease forwards .6s;
+}
+
+#logo path:nth-child(4){
+    stroke-dasharray: 76px;
+    stroke-dashoffset: 76px;
+    animation: logo-path 2s ease forwards .8s;
+}
+
+#logo path:nth-child(5){
+    stroke-dasharray: 388px;
+    stroke-dashoffset: 388px;
+    animation: logo-path 2s ease forwards 1s;
+}
+
+#logo path:nth-child(6){
+    stroke-dasharray: 264px;
+    stroke-dashoffset: 264px;
+    animation: logo-path 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(7){
+    stroke-dasharray: 100px;
+    stroke-dashoffset: 100px;
+    animation: logo-path 2s ease forwards 1.4s;
+}
+
+#logo path:nth-child(8){
+    stroke-dasharray: 315px;
+    stroke-dashoffset: 315px;
+    animation: logo-path 2s ease forwards 1.2s;
+}
+
+#logo path:nth-child(9){
+    stroke-dasharray: 264px;
+    stroke-dashoffset: 264px;
+    animation: logo-path 2s ease forwards 1s;
+}
+
+#logo path:nth-child(10){
+    stroke-dasharray: 354px;
+    stroke-dashoffset: 354px;
+    animation: logo-path 2s ease forwards 0.8s;
+}
+
+#logo path:nth-child(11){
+    stroke-dasharray: 264px;
+    stroke-dashoffset: 264px;
+    animation: logo-path 2s ease forwards 0.6s;
+}
+
+#logo path:nth-child(12){
+    stroke-dasharray: 315px;
+    stroke-dashoffset: 315px;
+    animation: logo-path 2s ease forwards 0.4s;
+}
+
+#logo path:nth-child(13){
+    stroke-dasharray: 184px;
+    stroke-dashoffset: 184px;
+    animation: logo-path 2s ease forwards 0.2s;
+}
+
+@keyframes logo-path {
+
+    from {
+        opacity: 0;
+    }
+    to {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+@keyframes logoFill {
+
+    from {
+        fill: none;
+        visibility: hidden;
+    }
+    to {
+        fill: antiquewhite;
+        
+    }
+}
+
+#logo:hover {
+    animation: afterefx 5s ease-in-out 1;
+}
+@keyframes afterefx {
+    0% {
+        fill: rgb(0, 0, 0);
+    }
+    50% {
+        background: #000000;
+        box-shadow: 0 0 5px #000000, 0 0 20px #3a3838, 0 0 40px #423f42;
+        transition-delay: 1s;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        transform: scale(0.8);
+
+    }
+    100% {
+        fill: black;
+    }
+}
+
+/* =================================================== NAVBAR ============================================================= */
+
+/* ======================= NAV "BUTTONS" LINKS (no ul li) USED SPAN for effekts, from Franks Laboratory Tutorials =============================*/
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    
+}
+.container {
+    width: 100vw;
+    margin: 80vh auto;
+    position: sticky;
+    
+}
+
+.btn {
+    width: 10vw;
+    height: 5vh;
+    position: relative;
+    background-color: white;
+    border: 2px solid black;
+    margin-right: 3vw;
+   
+
+
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn p {
+    width: 9vw;
+    height: 3.5vh;
+    background-color: white;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.5vh;
+    font-family: 'Gayathri';
+    position: relative;
+    z-index: 5;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.btn b {
+    font-size: 20px;
+}
+
+.btn figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: 1;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+
+.btn figure:nth-of-type(2) {
+    transition-delay: 1.2s;
+}
+
+.btn figure:nth-of-type(3){
+    transition-delay: .6s;
+}
+
+
+.btn figure:nth-of-type(4) {
+    transition-delay: .2s;
+}
+
+.btn:hover figure:nth-of-type(1) {
+    top: 4px;
+    left: -8px;
+    width: 50px;
+    height: 50px;
+    transition: .5s ease-out
+}
+
+.btn:hover figure:nth-of-type(2) {
+    top: 50px;
+    left: 160px;
+    width: 30px;
+    height: 30px;
+    transition: 1.2s ease-out
+}
+
+.btn:hover figure:nth-of-type(3) {
+    top: 10px;
+    left: 130px;
+    width: 80px;
+    height: 80px;
+    transition: .8s ease-out
+}
+
+.btn:hover figure:nth-of-type(4) {
+    top: -10px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+    transition: .5s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(1) {
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transition: .4s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(2) {
+    top: 60px;
+    left: -30px;
+    width: 40px;
+    height: 40px;
+    transition: .6s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(3) {
+    top: 50px;
+    left: 165px;
+    width: 40px;
+    height: 40px;
+    transition: .4s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(4) {
+    top: 70px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+    transition: .5s ease-out
+}
+
+.btn:not(:hover) figure {
+    animation: pop 2s;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+    100% {
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+}
+
+.btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    transition: 0.2s;
+}
+
+.btn:hover span{
+    transform: translate(-50%, -50%) rotate(-2deg);
+    font-size: 22px;
+}
+.btn:hover p {
+    text-shadow: 2px 2px orange;
+}
+
+.btn:hover figure {
+    transition: 0.5s all;
+    opacity: 1;
+}
+
+/* =================================== NAV END ============================ */
+
+/* ====================== FIRST PAGE HEADLINE ============================ */
+
+
+.banner {
+    width: 100%;
+    height: 50vh;
+    position: fixed;
+    top: 10vh;
+    background-image: url(./draw.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.banner h1 {
+    color: antiquewhite;
+    font-size: 7vh;
+    padding-top: 8%;
+    text-shadow: 1px 1px black;
+    animation: transitionIn1 1.2s;
+    
+}
+
+@keyframes transitionIn1 {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg);
+        transform: translateX(-100vw);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.content-top h2 {
+    color: rgb(228, 185, 66);
+    font-size: 7vh;
+    text-shadow: 1px 1px antiquewhite;
+    letter-spacing: 2px;
+    padding-top: 3vh;
+    margin: 0;
+}
+.content-top {
+    width: 100%;
+    position: relative;
+    top: 45vh;
+    background: rgb(12, 13, 43);
+    color: antiquewhite;
+    min-height: 150vh;
+}
+
+.content-top h4 {
+    font-size: 3vh;
+    margin-top: 3vh;
+}
+
+.text1 h4 a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 3vh;
+    margin-top: 3vh;
+    text-shadow: 1px 1px rgb(0, 0, 0);
+}
+.text1 strong {
+    color: antiquewhite;
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
+    padding: 2px;
+}
+
+.content-top p {
+    min-height: 100%;
+    padding: 2% 0;
+    line-height: 3vh;
+}
+
+.bannerTwo {
+    width: 100%;
+    min-height: 50vh;
+    position: sticky;
+    background-image: url(./idea.jpg);
+    background-size: contain;
+    background-position: center center;
+    z-index: 5;
+}
+
+.bannerTwo h1 {
+    color: antiquewhite;
+     font-size: 5vh;
+    padding-top: 40%;
+    text-shadow: 1px 1px rgb(0, 0, 0), 0px 0px 10px rgb(255, 166, 1), 0px 0px 30px black;
+    
+}
+
+.content-bottom h2 {
+    color: rgb(0, 0, 0);
+    font-size: 7vh;
+    text-shadow: 2px 2px antiquewhite;
+    letter-spacing: 3px;
+    padding-top:3vh;
+    margin: 0;
+
+}
+
+.content-bottom {
+    width: 100%;
+    position: relative;
+    top: 100vh;
+    background:  rgb(231, 190, 77);
+    color: rgb(44, 35, 23);
+    min-height: 100vh;
+}
+
+.content-bottom h4 {
+    font-size: 2.5vh;
+    margin-top: 3vh;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.content-bottom p {
+    min-height: 100%;
+    padding: 2% 0;
+    line-height: 2vh;
+    font-weight: 500;
+}
+
+
+/* ============================== IMAGES SECTION / FIGURE =================================== */
+
+.play {
+    z-index: 3;
+    top: 10vh;
+    position: sticky;
+    width: 100%;
+    height: 5vh;
+    background: linear-gradient(160deg, red, yellow, orange);
+    margin-bottom: 5vh;
+}
+
+h6 {
+    padding-top: 2vh;
+    letter-spacing: 10px;
+    font-size: 18px;
+
+}
+
+/* ========================================= IMAGES ==================================== */
+
+.images {
+    margin: auto;
+    width: 100vw;
+}
+
+#child {
+    z-index: 5;
+    margin: auto;
+    margin-top: 100vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+h3 {
+    margin: auto;
+    padding-top: 10px;
+    width: 60vw;
+    background: linear-gradient(120deg, rgb(255, 145, 0),  rgb(255, 0, 0));
+    font-size: 30px;
+    color: yellow;
+    text-shadow: 1px 1px black;
+    border: 1px solid antiquewhite;
+}
+
+h3:first-child {
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 0px 20px rgb(112, 112, 112), 0px 0px 40px rgba(0, 0, 0, 0.623);
+}
+
+h3:last-child {
+    border: 4px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    background: linear-gradient(120deg, rgb(231, 190, 77), antiquewhite);
+    transform: rotate(180deg);
+    text-transform: uppercase;
+}
+
+
+#child > img {
+    width: 60vw;
+    margin-top: 2vh;
+    border: 2px solid antiquewhite;
+    border-bottom-color: yellow;
+    border-top-color: orange;
+    border-left-color: red;
+    border-right-color: greenyellow;
+
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 200px;
+    box-shadow: 0px 0px 20px rgb(112, 112, 112), 0px 0px 40px rgba(0, 0, 0, 0.623);
+    
+}
+
+figcaption {
+    margin: auto;
+    font-family: 'Bangers', cursive;
+    color: white;
+    padding-top: 5px;
+    font-size: 30px;
+    background: black;
+    width: fit-content;
+}
+
+figcaption:first-child {
+    margin-top: 1vh;
+}
+
+
+.imgS {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+    
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.imgS img {
+    margin: auto;
+    padding: 5vw;
+    width: 650px;
+    min-width: 250px;
+    height: 350px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    z-index: 5;
+    position: relative;
+    border-radius: 200px;
+    
+}
+
+.imgS img:hover {
+    animation: imgRotate 2s ease-in-out 1;
+}
+
+@keyframes imgRotate {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
+
+
+.imgL{
+    width: 100%;
+    position: relative;
+
+}
+.imgL img {
+    width: 900px;
+    z-index: 5;
+
+}
+
+.imgL figcaption {
+    margin: 0.5vh auto;
+}
+
+.imgL a {
+    color: red;
+}
+
+
+ 
+.sitting img {
+    border-radius: 50%;
+    border: 20px solid red;
+    border-top-color: orange;
+    border-bottom-color: yellow;
+    
+}
+.sitting img:hover {
+    border-radius: 50%;
+    border: 20px solid yellow;
+    border-top-color: red;
+    border-bottom-color: orange;
+    transition: 1.2s ease;
+    
+}
+
+.sitting img:not(:hover) {
+    animation: efx 3s ease-in-out;
+}
+
+@keyframes efx {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        
+        transform: scale(1.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/*===================================================================*/
+/* ===================== MEDIA QUERIES =========================== */
+
+
+@media screen and (max-width: 1440px) {
+
+    #logo {
+        width: 35vw;
+    }
+
+    body {
+        width: 100vw;
+    }
+    
+    .images {
+        margin: auto;
+        width: 100%;
+    }
+
+    .imgS img {
+        height: 200px;
+        width: 400px;
+    }
+
+    .imgL img {
+        width: 600px;
+
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .logo {
+        width: 40%;
+    }
+    #logo{
+            width: 250px;
+    }
+
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.burger div {
+    width: 20px;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 1px 1px antiquewhite, 0px 0px 40px black;
+    margin: 4px;
+    
+}
+
+.nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 10vh;
+    padding-top: 10vh;
+    background-color: rgba(248, 124, 7, 0.904);
+    border-top-left-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    z-index: 1;
+    margin-right: -1vh;
+}
+.container {
+    width: 100vw;
+    margin: auto;
+    
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    position: relative;
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 60px;
+    
+
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn p {
+    width: 90px;
+    height: 30px;
+    background-color: white;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Gayathri';
+    position: relative;
+    z-index: 5;
+    font-weight: 900;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+.btn b {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.btn figure {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: 1;
+    transition-delay: 0.2s;
+    opacity: 0;
+}
+
+.btn figure:nth-of-type(2) {
+    transition-delay: 1.2s;
+}
+
+.btn figure:nth-of-type(3){
+    transition-delay: .6s;
+}
+
+
+.btn figure:nth-of-type(4) {
+    transition-delay: .2s;
+}
+
+.btn:hover figure:nth-of-type(1) {
+    top: 4px;
+    left: -8px;
+    width: 50px;
+    height: 50px;
+    transition: .5s ease-out
+}
+
+.btn:hover figure:nth-of-type(2) {
+    top: 50px;
+    left: 160px;
+    width: 30px;
+    height: 30px;
+    transition: 1.2s ease-out
+}
+
+.btn:hover figure:nth-of-type(3) {
+    top: 10px;
+    left: 130px;
+    width: 80px;
+    height: 80px;
+    transition: .8s ease-out
+}
+
+.btn:hover figure:nth-of-type(4) {
+    top: -10px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+    transition: .5s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(1) {
+    top: -5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    transition: .4s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(2) {
+    top: 60px;
+    left: -30px;
+    width: 40px;
+    height: 40px;
+    transition: .6s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(3) {
+    top: 50px;
+    left: 165px;
+    width: 40px;
+    height: 40px;
+    transition: .4s ease-out
+}
+
+.btn:nth-of-type(2n):hover figure:nth-of-type(4) {
+    top: 70px;
+    left: 25px;
+    width: 10px;
+    height: 10px;
+    transition: .5s ease-out
+}
+
+.btn:not(:hover) figure {
+    animation: pop 2s;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+    100% {
+        transform: scale(1.2) translate(-50%, -50%);
+    }
+}
+
+.btn span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    transition: 0.2s;
+}
+
+.btn:hover span{
+    transform: translate(-50%, -50%) rotate(-2deg);
+    font-size: 22px;
+}
+.btn:hover p {
+    text-shadow: 2px 2px orange;
+}
+
+.btn:hover figure {
+    transition: 0.5s all;
+    opacity: 1;
+}
+
+/* =================================== NAV END ============================ */
+
+.nav-active {
+    transform: translateX(0%);
+    z-index: 1;
+}
+
+@keyframes navFade {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0%);
+        
+    }
+}
+
+.text3 {
+    visibility: hidden;
+}
+
+h3 {
+    text-transform: none;
+}
+
+h3:first-child {
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+h3:last-child {
+    font-size: 16px;
+    transform: rotate(180deg);
+}
+
+
+#child > img {
+    width: 60vw;
+    margin-top: 2vh;
+    border: 2px solid antiquewhite;
+    border-bottom-color: yellow;
+    border-top-color: orange;
+    border-left-color: red;
+    border-right-color: greenyellow;
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(112, 112, 112), 0px 0px 40px rgba(0, 0, 0, 0.623);
+    
+}
+
+figcaption {
+    font-size: 18px;
+}
+
+
+    .images {
+        margin: auto;
+        max-width: 90%;
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .imgS img {
+        width: 100px;
+        margin: 1vw;
+        flex-direction: row;
+        border-radius: 20px;
+    }
+
+    .imgL img {
+        width: 250px;
+    }
+
+    
+    .game a {
+        color: yellow;
+        text-shadow: 1px 1px red;
+    }
+
+}
